@@ -7,9 +7,9 @@ cM = 0
 common = ["Rock", "Iron", "Wood", "Pistol", "Spear", "Arrow & Bow"]
 c2 = ["Shotgun", "Gold", "Average PC", "MS-DOS", "Knuclers", "Car Engine"]
 c3 = ["Automated Shotgun", "Laptop", "Medicine", "Map of the World", "Golf Cart"]
-inv = open("items.txt", 'r+')
-money = open("money.txt", 'r+')
-boxInv = open("box.txt", 'r+')
+inv = open("items.txt", 'a+')
+money = open("money.txt", 'a+')
+boxInv = open("box.txt", 'a+')
 Lines = inv.readlines()
 inv.close()
 Money = money.readlines()
