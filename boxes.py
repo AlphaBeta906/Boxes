@@ -37,14 +37,20 @@ while True:
             if cM > 10:
                 boxes.append("C Box")
                 cM -= 10
+            else:
+                print ("Too poor lad")
         elif do == "C2 Box":
             if cM > 30:
                 boxes.append("C2 Box")
                 cM -= 30
+            else:
+                print ("Too poor lad")
         elif do == "C3 Box":
             if cM > 90:
                 boxes.append("C3 Box")
                 cM -= 90
+            else:
+                print ("Too poor lad")
     elif do == "Unbox":
         print ("What box do you want to open?")
         print (", ".join(boxes))
@@ -52,17 +58,17 @@ while True:
         if do in boxes:
             if do == "C Box":
                 thing = choice(common)
-                inv.append(thing)
+                inventory.append(thing)
                 boxes.remove("C Box")
                 print ("You got one " + thing)
             elif do == "C2 Box":
                 thing = choice(c2)
-                inv.append(thing)
+                inventory.append(thing)
                 boxes.remove("C2 Box")
                 print ("You got one " + thing)
             elif do == "C3 Box":
                 thing = choice(c3)
-                inv.append(thing)
+                inventory.append(thing)
                 boxes.remove("C3 Box")
                 print ("You got one " + thing)
     elif do == "XXXX":
@@ -88,6 +94,6 @@ while True:
     index = 0
     with open("box.txt", 'w') as boxInv:
         for item in inventory:
-            boxInv.write(box[index])
+            boxInv.write(boxes[index])
             index = index + 1
     boxInv.close()
